@@ -5,16 +5,16 @@ import Layout from '@/layouts/index.vue';
 const modules = import.meta.globEager('./modules/**/*.ts');
 
 const routes: RouteRecordRaw[] = [
+  // {
+  //   path: '/',
+  //   redirect: '/playable/index',
+  // },
   {
     path: '/',
-    redirect: '/playable/index',
-  },
-  {
-    path: '/playable',
     name: 'playable',
     component: Layout,
-    redirect: '/playable/index',
-    meta: {title: 'pl模版', icon: 'a'},
+    // redirect: '/playable/index',
+    meta: {title: 'pl模版', icon: 'Management'},
     children: [
       {
         path: 'index',
@@ -29,7 +29,7 @@ const routes: RouteRecordRaw[] = [
     name: 'roi',
     component: Layout,
     redirect: '/roi/index',
-    meta: {title: 'roi', icon: 'a'},
+    meta: {title: 'roi', icon: 'SetUp'},
     children: [
       {
         path: 'index',
